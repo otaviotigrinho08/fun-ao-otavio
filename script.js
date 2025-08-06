@@ -1,22 +1,36 @@
-const caixaprincipal = document.querySelectorAll(".caixa-principal");
-const caixaperguntas = document.querySelectorAll("caixa-perguntas");
-const caixaAlternativas = document.querySelectorAll("caixaAlternativas");
-const caixaresultado = document.querySelectorAll("caixaresultado");
-const textoresultado = document.querySelectorAll("textoresultado");
+const caixaPrincipal = document.querySelectorAll(".caixa-principal");
+const caixaPerguntas = document.querySelectorAll(".caixa-perguntas");
+const caixaAlternativas = document.querySelectorAll(".caixa-alternativas");
+const caixaResultado = document.querySelectorAll(".caixa-resultado");
+const textoResultado = document.querySelectorAll(".texto-resultado");
 
 const perguntas = [
 {
-enunciado:"pergunta1",
-alternativas:[
-alternativa1,
-"alternativa2"
-]
+enunciado:"Pergunta 1",
+alternativas:["alternativa1","alternativa2"]
 },
 {
-    enunciado:"pergunta2",
-    alternativas:[
-    alternativa1,
-    "alternativa2"
-    ]
-    },
-]
+enunciado:"Pergunta1",
+alternativas:["alternativa1","alternativa2"]
+},
+{
+enunciado:"Pergunta1",
+alternativas:["alternativa1","alternativa2"]
+},
+{
+enunciado:"Pergunta1",
+alternativas:["alternativa1","alternativa2"]
+ },
+{
+enunciado:"Pergunta1",
+alternativas:["alternativa1","alternativa2"]
+ }
+];
+
+let atual = 0;
+let perguntaAtual;
+function mostraPergunta(){
+perguntaAtual = perguntas [atual];
+caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+mostraPergunta()
